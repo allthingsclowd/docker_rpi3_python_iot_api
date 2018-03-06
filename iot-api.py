@@ -8,7 +8,7 @@ Complete project details: http://randomnerdtutorials.com
 '''
 
 import RPi.GPIO as GPIO
-from flask import Flask, request, response
+from flask import Flask, request, Response
 app = Flask(__name__)
 
 GPIO.setmode(GPIO.BCM)
