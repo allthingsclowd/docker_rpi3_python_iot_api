@@ -22,7 +22,7 @@ pins = {
 # Set each pin as an output and make it low:
 for pin in pins:
    GPIO.setup(pin, GPIO.OUT)
-   GPIO.output(pin, GPIO.LOW)
+   GPIO.output(pin, GPIO.HIGH)
 
 @app.route("/")
 def main():
@@ -46,11 +46,11 @@ def action(changePin, action):
    # If the action part of the URL is "on," execute the code indented below:
    if action == "on":
       # Set the pin high:
-      GPIO.output(changePin, GPIO.HIGH)
+      GPIO.output(changePin, GPIO.LOW)
       # Save the status message to be passed into the template:
       message = "Turned " + deviceName + " on."
    if action == "off":
-      GPIO.output(changePin, GPIO.LOW)
+      GPIO.output(changePin, GPIO.HIGH)
       message = "Turned " + deviceName + " off."
 
    # For each pin, read the pin state and store it in the pins dictionary:
