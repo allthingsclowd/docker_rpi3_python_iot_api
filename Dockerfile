@@ -8,4 +8,6 @@ git clone https://github.com/allthingsclowd/docker_rpi3_python_iot_api.git
 
 WORKDIR /docker_rpi3_python_iot_api
 
+EXPOSE 8989
+
 CMD python iot-api.py
