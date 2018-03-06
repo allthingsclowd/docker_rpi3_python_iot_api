@@ -19,6 +19,19 @@ Launch as follows:
 ```bash
 docker container run -d -p 4321:8989 --name my-python-iot-demo --deviie /dev/gpiomem allthingscloud/rpi3-python-iot-api
 ```
+# Verification
+## Using curl
+curl http://<raspberry pi ip address>:4321/   <-- Returns the status of the LED
+curl http://<raspberry pi ip address>:4321/17/on   <-- Turns on the LED attached to GPIO17 and Returns a json status response
+curl http://<raspberry pi ip address>:4321/17/off   <-- Turns off the LED attached to GPIO17 and Returns a json status response	
+							
+## Using a browser
+Navigate to :
+http://<raspberry pi ip address>:4321/   <-- Returns the status of the LED
+http://<raspberry pi ip address>:4321/17/on   <-- Turns on the LED attached to GPIO17 and Returns a json status response
+http://<raspberry pi ip address>:4321/17/off   <-- Turns off the LED attached to GPIO17 and Returns a json status response
+						  
+
 
 Similar golang and nodejs docker images can be found in my github repos - https://github.com/allthingsclowd
 
