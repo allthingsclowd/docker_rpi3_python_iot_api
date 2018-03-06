@@ -17,7 +17,7 @@ docker image build --tag allthingscloud/rpi3-python-iot-api -f Dockerfile .
 
 Launch as follows:
 ```bash
-docker container run -d -p 4321:8989 --name my-python-iot-demo2 --deviie /dev/gpiomem allthingscloud/rpi3-python-iot-api
+docker container run -d -p 4321:8989 --name my-python-iot-demo --deviie /dev/gpiomem allthingscloud/rpi3-python-iot-api
 ```
 
 Similar golang and nodejs docker images can be found in my github repos - https://github.com/allthingsclowd
